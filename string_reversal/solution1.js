@@ -1,4 +1,4 @@
-function revserse(str){
+function reverse(str){
     const strArry = [...str]
     const strRevserse = []
     for(let i = strArry.length; i >= 0; i--){
@@ -6,4 +6,4 @@ function revserse(str){
     }
     return strRevserse.join("")
 }
-console.log(revserse(""))
+console.log(reverse("abimbola"))
