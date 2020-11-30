@@ -1,7 +1,6 @@
 function palindrome(str){
     const strReverse = [...str].reverse().join("")
-    if(strReverse !== str) return false
-    return true
+   return str == strReverse
    
 }
 console.log(palindrome("abba"))
