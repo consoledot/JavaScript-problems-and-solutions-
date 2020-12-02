@@ -20,4 +20,4 @@ function maxChars(chars){
  
     return maxChar
 }
-console.log(maxChars("abimbcccccbbbbbbbbbbola"))
+console.log(maxChars("abimbcccccbbola"))
