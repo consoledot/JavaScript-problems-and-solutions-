@@ -1,7 +1,7 @@
 function maxChars(chars){
     const charMap ={}
     let max = 0
-    let maxChar={}
+    const maxChar={}
     for(let char of chars){
         charMap[char] = charMap[char] + 1 || 1
         for(let char in charMap){
