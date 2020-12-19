@@ -3,11 +3,14 @@
 //     while
     
 // }
-let a = []
+// a , 5
+let a = [1,2,3,4]
+let num = 2
+const newa = []
 for(let i in a){
-    if(a[i].length < 5){
-        a[i].push(3)
+    if(newa.length <= num){
+        newa.push(a[i])
     }
    
 }
-console.log(a)
+console.log(newa)
