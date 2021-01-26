@@ -1,16 +1,14 @@
-// function arrayChunk(arr, num){
-//     let cur =0
-//     while
-    
-// }
-// a , 5
-let a = [1,2,3,4]
-let num = 2
-const newa = []
-for(let i in a){
-    if(newa.length <= num){
-        newa.push(a[i])
+function chunk(array, size){
+    const chuncked = []
+    for(let element of array){
+        const last = chuncked[chuncked.length - 1]
+        if(!last || last.length === size){
+            chuncked.push([element])
+        }else{
+            last.push(element)
+        }
     }
-   
-}
-console.log(newa)
+    return chuncked
+} 
+
+console.log(chunk([1,2,3,4,5,6,7],3))
