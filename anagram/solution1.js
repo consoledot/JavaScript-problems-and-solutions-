@@ -1,4 +1,5 @@
-function obj(word){
+function build(word){
+    word = word.replace(/[^\w]/g,"").toLowerCase()
     const char = {}
     for(let i of word){
         if(!char[i]){
@@ -11,19 +12,16 @@ function obj(word){
 }
 
 function anagram(text1, text2){
-    text1 = text1.replace(/[^\w]/g,"").toLowerCase()
-    text2 = text2.replace(/[^\w]/g,"").toLowerCase()
-    const firstobj = obj(text1)
-    const secondobj = obj(text2)
-    if(Object.entries(firstobj).length !== Object.entries(secondobj).length){
+    const firstobj = build(text1)
+    const secondobj = build(text2)
+    if(Object.keys(firstobj).length !== Object.keys(secondobj).length){
         return "Not an anagram"
     }
     for(let elem in firstobj){
         if(firstobj[elem] !== secondobj[elem]){
             return "Alaye no"
-        } else{
-            return "Yass"
         }
+        return "Yyay"
     }
 }
-console.log(anagram("Hi there","Bye there"))
+console.log(anagram("baba o","ab oab"))
